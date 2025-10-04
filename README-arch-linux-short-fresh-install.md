@@ -133,6 +133,15 @@ pacman -S
   dolphin kate vlc xarchiver 
 ```
 
+# Add all real users to sudoers
+echo '%wheel ALL=(ALL) ALL' | sudo tee -a ./etc/sudoers > /dev/null
+
+# Enable services on boot
+```
+sudo systemctl --root=. enable NetworkManager
+sudo systemctl --root=. enable sddm
+```
+
 ### Softwares
 ```
 pacman -S firefox plasma-browser-integration firefox-ublock-origin git gitg ufw meld
