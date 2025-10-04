@@ -100,19 +100,19 @@ Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
-### Boot loader (GRUB)
+## Dual boot loader (GRUB)
 ```
 pacman -S grub efibootmgr
-mkdir -p /esp ou /boot
-fdisk -l /dev/sdX (X é o disco que tem o windows 10/11)
+mkdir -p /esp
+fdisk -l /dev/sdX (where X disk with windows 10/11)
 ```
-Após localizar a partição que tá escrito "EFI System"
+Locate "EFI System" partition and
 ```
-mount /dev/sdXn /esp ou /boot
+mount /dev/sdXn /esp
 ```
-(onde n é o número da partição "EFI System")
+(where n is the number of "EFI System")
 ```
-grub-install --target=x86_64-efi --efi-directory=esp|boot --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=GRUB
 ```
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -128,8 +128,8 @@ pacman -S
   syslinux sudo wget curl man  \
   networkmanager pulseaudio-alsa ntfs-3g dosfstools \
   mtools exfat-utils un{rar,zip} zip p7zip \
-  base-devel multilib-devel git man openssh \
-  plasma sddm packagekit-qt5 xorg xorg-server \
+  base-devel git man openssh \
+  plasma sddm packagekit-qt6 xorg xorg-server \
   dolphin kate vlc xarchiver 
 ```
 
