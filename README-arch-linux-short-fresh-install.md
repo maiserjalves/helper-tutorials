@@ -103,20 +103,22 @@ genfstab -U /mnt >> /mnt/etc/fstab
 ## Dual boot loader (GRUB)
 ```
 pacman -S grub efibootmgr
-mkdir -p /esp
+mkdir -p /boot/efi
 fdisk -l /dev/sdX (where X disk with windows 10/11)
 ```
 Locate "EFI System" partition and
 ```
-mount /dev/sdXn /esp
+mount /dev/sdXn /boot/efi/
 ```
 (where n is the number of "EFI System")
 ```
-grub-install --target=x86_64-efi --efi-directory=/esp --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 ```
 ```
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+Run `efibootmgr` command to check UEFI boot entries are loaded
 
 ### Installing Some Essential Packages:
 
