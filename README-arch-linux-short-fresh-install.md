@@ -133,10 +133,20 @@ pacman -S
   dolphin kate vlc xarchiver 
 ```
 
-# Add all real users to sudoers
-echo '%wheel ALL=(ALL) ALL' | sudo tee -a ./etc/sudoers > /dev/null
+# Create user and enable services on boot
 
-# Enable services on boot
+## Create your user
+```
+useradd -m -g wheel -G users -s /bin/bash <yourusername>
+passwd <youruserrname>
+```
+
+## Add all real users to sudoers
+```
+echo '%wheel ALL=(ALL) ALL' | sudo tee -a ./etc/sudoers > /dev/null
+```
+
+## Enable services on boot
 ```
 sudo systemctl --root=. enable NetworkManager
 sudo systemctl --root=. enable sddm
