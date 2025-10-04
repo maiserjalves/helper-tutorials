@@ -158,3 +158,5 @@ sudo systemctl --root=. enable sddm
 ```
 pacman -S firefox plasma-browser-integration firefox-ublock-origin git gitg ufw meld
 ```
+
+### reboot...
