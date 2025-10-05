@@ -56,25 +56,33 @@ paru -S python-pytorch-rocm
 git clone git@github.com:pytorch/examples.git
 ```
 
-Navigate to some pytorch example folder and create the python virtual environment for that example:
+Navigate to some pytorch example folder and create the python virtual environment (MNIST example in this case):
 
 ```
 cd examples/mnist
 ```
 
 ### 1. Create a Virtual Environment:
+```
 python -m venv <my_venv_name>
+```
 
 ### 2. Activate the Virtual Environment:
+```
 source <my_venv_name>/bin/activate
+```
 
 ### 3. Install Dependencies from requirements.txt:
+```
 pip install -r requirements.txt
+```
 
-### 4. (Optional) Deactivate the Virtual Environment :
+### 4. (Optional) Deactivate the Virtual Environment:
+```
 deactivate
+```
 
-Run the pytorch mnist example:
+### Run pytorch `MNIST` example:
 ```
 python main.py
 ```
