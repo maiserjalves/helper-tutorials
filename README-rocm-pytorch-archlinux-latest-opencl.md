@@ -51,7 +51,7 @@ Install Pytorch for Archlinux ROCm
 paru -S python-pytorch-rocm
 ```
 
-###Download Pytorch examples:
+### Download Pytorch examples:
 ```
 git clone git@github.com:pytorch/examples.git
 ```
