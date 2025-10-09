@@ -1,5 +1,5 @@
 ## Help tutorials
-Tutorials made by myself to remember how to do things that sometimes we forget
+Tutorials made to explain how to do things that sometimes we forget
 
 ## Arch Linux Fresh Install (short version)
 [archlinux-fresh-install-short](README-arch-linux-short-fresh-install.md)
